@@ -3,7 +3,8 @@ from flask_restful import Api, Resource, reqparse
 from common.models.stu import Stu, Sub, db
 from flask_restful import Resource, marshal, fields
 import traceback
-
+# import ipdb
+# ipdb.set_trace()  类似于打断点
 stu = Blueprint('stu', __name__)
 api = Api(stu)
 
