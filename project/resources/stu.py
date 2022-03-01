@@ -35,7 +35,7 @@ class AddSub(Resource):
         return '添加成功!'
 
 
-# 添加 Sbu
+# 添加 Stu
 class AddStu(Resource):
     def post(self):
         parser = reqparse.RequestParser()
@@ -82,7 +82,6 @@ class DelSub(Resource):
             id = args.get('id')
             print('111111', id)
             Stu.query.filter_by(sub_id=id).delete()
-            # db.session.commit()
             Sub.query.filter_by(id=id).delete()
             db.session.commit()
             return '删除成功'
